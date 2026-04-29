@@ -4,8 +4,8 @@
 ./distrobox-shims.sh
 
 # Update the container and install packages
-apk update -y
-apk upgrade -y
+apk update
+apk upgrade
 tee /etc/apk/repositories <<EOF
 http://mirror.postmarketos.org/postmarketos/main
 http://mirror.postmarketos.org/postmarketos/extra-repos/systemd/main
