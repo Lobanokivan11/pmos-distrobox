@@ -1,0 +1,14 @@
+FROM quay.io/toolbx-images/alpine-toolbox:edge
+
+LABEL com.github.containers.toolbox="true" \
+      usage="This image is meant to be used with the toolbox or distrobox command" \
+      summary="An PostMarketOS Container" \
+      maintainer="lobanokivan11@gmail.com"
+
+# Copy the setup scripts and package list
+COPY ../pmos.sh /
+COPY ../distrobox-shims.sh /
+
+# Run the setup scripts
+RUN chmod +x pmos.sh distrobox-shims.sh && /pmos.sh
+RUN rm /pmos.sh /distrobox-shims.sh
