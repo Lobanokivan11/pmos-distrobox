@@ -13,9 +13,8 @@ http://dl-cdn.alpinelinux.org/alpine/edge/main
 http://dl-cdn.alpinelinux.org/alpine/edge/community
 http://dl-cdn.alpinelinux.org/alpine/edge/testing
 EOF
-apk add -u --allow-untrusted postmarketos-keys
-apk add postmarketos-base postmarketos-base-systemd
-# fixes nvidia setup
-apk add gcompat libc6-compat
+apk add -u --allow-untrusted postmarketos-keys # install keys needed for pmos' keys
+apk add postmarketos-base postmarketos-base-systemd # pmos base packages
+apk add gcompat libc6-compat # fixes nvidia setup
 apk update
 apk upgrade
