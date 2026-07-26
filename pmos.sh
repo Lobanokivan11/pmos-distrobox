@@ -14,7 +14,7 @@ http://dl-cdn.alpinelinux.org/alpine/edge/community
 http://dl-cdn.alpinelinux.org/alpine/edge/testing
 EOF
 apk add -u --allow-untrusted postmarketos-keys
-apk add postmarketos-base
-apk add postmarketos-base-systemd
+apk add postmarketos-base postmarketos-base-systemd
+apk add gcompat libc6-compat
 apk update
 apk upgrade
